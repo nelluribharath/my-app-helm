@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/nelluribharath/my-app-helm.git'
     targetRevision: main
-    path: my-app-helm
+    path: .
     helm:
       valueFiles:
         - values-dev.yaml

@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          IMAGE=mydockerhubuser/myapp
+          IMAGE=bharathaws/myapp
           TAG=${{ github.sha }}
           docker build -t $IMAGE:$TAG .
           docker push $IMAGE:$TAG

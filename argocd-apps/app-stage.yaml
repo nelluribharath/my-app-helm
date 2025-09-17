@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-stage
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/nelluribharath/my-app-helm.git'
+    targetRevision: main
+    path: .
+    helm:
+      valueFiles:
+        - values-stage.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: stage
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true

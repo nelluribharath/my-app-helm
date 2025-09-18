@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: nginx
+  repository: bharathaws/myapp
   tag: "5935f546b67e568be757e6d2c782e6e62cec36a9"
 service:
   type: NodePort

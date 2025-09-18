@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: bharathaws/myapp
-  tag: "5935f546b67e568be757e6d2c782e6e62cec36a9"
+  tag: "46de9aafb2e1c2e27af57f25addf3e007a647d44"
 service:
   type: NodePort
   port: 80

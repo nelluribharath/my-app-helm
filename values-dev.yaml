@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: bharathaws/myapp
-  tag: "latest"
+  tag: "7ec8181ee71dbf25258c8d0521517199c5a9cad4"
 
 service:
   type: ClusterIP

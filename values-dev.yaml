@@ -1,7 +1,16 @@
 replicaCount: 1
+
 image:
   repository: bharathaws/myapp
-  tag: "10f0618156aa5992056f990b1e618516981f4149"
+  tag: "latest"
+
 service:
-  type: NodePort
-  port: 80
+  type: ClusterIP
+  port: 5000
+
+ingress:
+  enabled: true
+  className: nginx
+  host: myapp.local
+  tls: false
+  tlsSecret: ""
